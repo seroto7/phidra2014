@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TARGET_FILE=$1
+OBJECT_FILE=temp
+
+echo "$TARGET_FILE will be compiled and executed"
+echo "..."
+
+gcc -Wall -W -Werror $TARGET_FILE -o $OBJECT_FILE || exit -1
+echo " "
+echo "### RESULT ###"
+./$OBJECT_FILE
+rm -f $OBJECT_FILE
