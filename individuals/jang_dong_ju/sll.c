@@ -14,7 +14,9 @@ void list_init(void)
 	tail = (struct node *)malloc(sizeof(struct node));
 
 	head->value = -1;
-	tail->value = -1;
+	tail->value = 0x7FFFFFFF;
+	// MSB is a signed bit
+	// The value is a negative when the signed bit is 1
 
 	head->next = tail;
 	tail->next = NULL;
@@ -79,17 +81,16 @@ void add_list_with_sort(int input)
 
 	for (p = head , q = head ; p != NULL ; q = p,  p = p->next) {
 		
-		if(input < p->value) {
-			printf("##DEBUG## add %d\n", input);
-			
-			break;
+		if((q->value < input) && (input < p->value)) {
+			new_node->next = q->next;
+			q->next = new_node;
+			return;
+		} else if (input == p->value) {
+			printf("##DEBUG## Try to add smae value\n");
+			free(new_node);
+			return;
 		}
-		
-		
 	}
-
-	
-
 }
 
 int main()
@@ -97,17 +98,19 @@ int main()
 	list_init();
 	
 	
-	add_list(10);
-	add_list(20);
-	add_list(30);
-	add_list(40);
-	add_list(50);
+	add_list_with_sort(10);
+	add_list_with_sort(20);
+	add_list_with_sort(30);
+	add_list_with_sort(40);
+	add_list_with_sort(50);
 	
+
 	print_all_list();
 	
 	remove_list(40);
 
 	print_all_list();
+
 	return 0;
 }
 
