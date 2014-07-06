@@ -14,7 +14,10 @@ void list_init(void)
 	tail = (struct node *)malloc(sizeof(struct node));
 
 	head->value = -1;
-	tail->value = -1;
+	//tail->value = -1;
+	tail->value = 0x7FFFFFFF;
+	/* MSB is a signed bit */
+	/* The value is a negative when the signed bit is 1 */
 
 	head->next = tail;
 	tail->next = NULL;
@@ -77,31 +80,41 @@ void add_list_with_sort(int input)
 	printf("##DEBUG## Add with sort %d\n", input);
 
 	for ( p = head, q = head; p != NULL ; q = p , p = p->next){
-		if ( input >= p->value) {
-			break;
+	/* We will add the new node next to q and previous from p */
+		/* q->value < < p->value */
+		if((q->value < input) && (input < p->value)) {
+			/*do addtion*/
+			new_node->next = q->next;
+			q->next = new_node;
+			return;
+		} else if ( input == p->value) {
+			printf("##DEBUG## Try to add same value\n");
+			free(new_node);
+			return;
 		}
+		
 	}
-
-	new_node->next = head ->next;
-	head->next = new_node;
-
-	printf("##DEBUG## %d is added in list\n", input);
-
 }
 
 int main()
 {
 	list_init();
 
-	add_list(10);
-	add_list(20);
-	add_list(30);
-	add_list(40);
-	add_list(50);
+	add_list_with_sort(10);
+	add_list_with_sort(20);
+	add_list_with_sort(60);
+	add_list_with_sort(30);
+	add_list_with_sort(50);
+	add_list_with_sort(40);
 
 	print_all_list();
 	
 	rm_list(30);
+
+	print_all_list();
+
+	rm_list(20);
+	rm_list(60);
 
 	print_all_list();
 
