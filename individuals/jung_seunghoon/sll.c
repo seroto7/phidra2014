@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 struct node{
 	int value;
 	struct node *next;
@@ -12,8 +14,10 @@ void list_init(void)
 	tail = (struct node *)malloc(sizeof(struct node));
 
 	head->value = -1;
-	tail->value = -1;
-
+	tail->value = 0x7FFFFFFF;
+	/* MSB is a signed bit */
+	/*THe value is a negative when the sigend bit is 1*/
+	
 	head->next = tail;
 	tail->next = NULL;
 
@@ -67,8 +71,6 @@ void remove_list(int input)
 
 void add_list_with_sort(int input)
 {
-	
-
 	struct node *p;
 	struct node *q;
 	struct node *new_node;
@@ -78,26 +80,35 @@ void add_list_with_sort(int input)
 
 	printf("##DEBUG## Add with sort %d\n", input);
 
-	for (p = head, q = head ; p != NULL ;q = p , p = p->next ) {
-		if (input > p->value)
-		
+	for (p = head, q = head ; p != NULL ; q = p , p = p->next ) {
+	/*we will add the new node tenxt to q and previous from p*/
+		if((q->value < input) && (input < p->value)) {
+			new_node->next = q->next;
+			q->next = new_node;
+			return;
+		} else if (input == p->value) {
+			printf("##DEBUG## Try to add same value\n");
+			free(new_node);
+			return;
+		}
 	}		
-	
 }
 
 int main()
 {
 	list_init();
 	
-	add_list(10);
-	add_list(20);
-	add_list(30);
-	add_list(40);
-	add_list(50);
-	remove_list(20);
+	add_list_with_sort(10);
+	add_list_with_sort(50);
+	add_list_with_sort(30);
+	add_list_with_sort(40);
+	add_list_with_sort(20);
+
 	print_all_list();
 	
-	
+	remove_list(40);
+
+	print_all_list();
 }
 
 	
