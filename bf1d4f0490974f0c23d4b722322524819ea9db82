@@ -1,0 +1,140 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3aa7f18b_0de719e6",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "warning: incompatible implicit declaration of built-in function\n\n빌드하면서 warning이 났었는데,\n찾아보니까 malloc / free가 stdlib.h 에 있더라고,\n\n#include \u003cstdlib.h\u003e\n\n라고 추가하면 warning이 사라집니다.",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_4d04317e",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 33,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "temp_node의 정체는 무엇인가요?",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_8dda2916",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 39,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "불필요한 주석이니 삭제해주세요",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_add7e5ec",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "head의 prev는 무엇이 있나요?",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_cdd021fa",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "white space는 제거해주세요",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_6d09ed94",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "p의 경우 pointer로 사용되었지만 따로 allocation하지 않았으므로,\nfree하지 않아도 됩니다.\n\n오히려 이경우엔 p가 list의 마지막 멤버를 가리키는 상태에서\nfree하게 되어 list 마지막 멤버를 지워버릴 것 같은데 재검토 해보세요",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_0dfe396c",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "이렇게 한다면 어떨까요,\np-\u003eprev-\u003enext \u003d p-\u003enext;\np-\u003enext-\u003eprev \u003d p-\u003eprev;\nfree(p);\n\nq와 r은 불필요하지 않을까요?",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_2d03f574",
+        "filename": "individuals/jang_dong_ju/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 93,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:52:08Z",
+      "side": 1,
+      "message": "remove function 처럼 한 개의 pointer로 구현할 수 있을 것 같습니다.\n확인해보세요",
+      "revId": "bf1d4f0490974f0c23d4b722322524819ea9db82",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
