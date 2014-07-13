@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3aa7f18b_edcddd5e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 6,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "individual/ 에 있는 파일은 숙제를 내기 위한 파일이니 수정하시 마세요",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_2dec55c7",
+        "filename": "individuals/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "warning: incompatible implicit declaration of built-in function\n빌드하면서 warning이 났었는데, 찾아보니까 malloc / free가 stdlib.h 에 있더라고,\n#include \u003cstdlib.h\u003e\n라고 추가하면 warning이 사라집니다.",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_edf4fd88",
+        "filename": "individuals/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 42,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "불필요한 주석은 삭제하세요",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_8df1c997",
+        "filename": "individuals/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 72,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "q가 없이 구현할 수 있지 않을까요?",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_adee05b3",
+        "filename": "individuals/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "for loop 밖에서 구현되어 무조건 수행됩니다.\n그래도 되나요?",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "3aa7f18b_4d2bd1eb",
+        "filename": "individuals/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-13T14:56:33Z",
+      "side": 1,
+      "message": "아래 방법은 SLL에서 사용하던 방법입니다.\nadd list 함수에서처럼 next-\u003eprev 또는 prev-\u003enext로 접근하는 방법을\n이용한다면 q가 필요없을 것 같은데요,\n다시 생각해보세요",
+      "revId": "c8b5c3372156618f03741b8c79c30715dfcc3a67",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
