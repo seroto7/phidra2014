@@ -1,0 +1,106 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa2e39b8_481273b5",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "white space 삭제 바랍니다",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2e39b8_e84547b4",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "q는 무슨 일을 하나요?",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2e39b8_28172fa5",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "만약 for문에서 찾지 못하였을 때도,\n이부분의 코드를 수행하게 됩니다.\n그래도 될까요?",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2e39b8_880c7b96",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "q는 언제 사용하나요?",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2e39b8_c825e30b",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 86,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "q \u003c input \u003c p 로 찾는데,\n그렇게 할 필요가 있을까요?\n\ninput을 찾다가 input \u003c p 조건이 되면 그 이후는 모두 p보다 크지 않을까요?\n반대로 input \u003e p 이면 무조건 다음 노드로 넘어갈 수 있지 않을까요?",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa2e39b8_a8221fff",
+        "filename": "individuals/jung_seunghoon/dll.c",
+        "patchSetId": 1
+      },
+      "lineNbr": 87,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-18T00:19:13Z",
+      "side": 1,
+      "message": "p-\u003eprev-\u003enext는 p 아닌가요?",
+      "revId": "927e925539076f7c7e2677e3a2a84e4084acfce7",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
