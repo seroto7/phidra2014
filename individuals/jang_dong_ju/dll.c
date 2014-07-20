@@ -30,7 +30,7 @@ void list_init(void)
 
 void add_list(int input)
 {
-	struct node *new_node, *temp_node;
+	struct node *new_node;
 
 	new_node = (struct node *)malloc(sizeof(struct node));
 
@@ -39,9 +39,8 @@ void add_list(int input)
 	/* need to change */
 	new_node->next = head->next;
 	new_node->prev = head->prev;
-	temp_node = new_node->next;
 	head->next = new_node;
-	temp_node->prev = new_node;
+	new_node->next->prev = new_node;
 
 	printf("##DEBUG## %d add in the list \n", input);	
 }
@@ -56,24 +55,20 @@ void print_all_list(void)
 		printf("[%d] -> ", p->value);
 	}
 	printf("\n");
-	free(p);
 }
 
 void remove_list(int input)
 {
 	/* need to change */
-	struct node *p, *q, *r;
+	struct node *p;
 
 	printf("##DEBUG## Remove %d \n", input);
 
-	for (p = head, q = head, r = head ; p != NULL ; p = p->next) {
+	for (p = head ; p != NULL ; p = p->next) {
 
 		if (input == p->value) {
-			q = p->prev;
-			q->next = p->next;
-			r = p->next;
-			r->prev = p->prev;
-			free(p);
+			p->prev->next = p->next;
+			p->next->prev = p->prev;
 			break;
 		}
 	}
@@ -90,12 +85,12 @@ void add_list_with_sort(int input)
 	printf("##DEBUG## Add with sort %d\n", input);
 
 	/* need to change */
-	for (p = head, q = head ; p != NULL ; p = p->next) {
-		q = p->prev;
-		if ((q->value < input) && (input < p->value)) {
-			new_node->next = q->next;
+	for (p = head ; p != NULL ; p = p->next) {
+
+		if ((p->prev->value < input) && (input < p->value)) {
+			new_node->next = p->prev->next;
 			new_node->prev = p->prev;
-			q->next = new_node;
+			p->prev->next = new_node;
 			p->prev = new_node;
 			return;
 		}
