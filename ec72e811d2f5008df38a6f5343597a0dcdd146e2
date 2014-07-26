@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7a42497e_becd3989",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 1001693
+      },
+      "writtenOn": "2014-07-26T07:01:00Z",
+      "side": 1,
+      "message": "please remove this line or add new empty space",
+      "revId": "ec72e811d2f5008df38a6f5343597a0dcdd146e2",
+      "serverId": "d5d70762-12d0-45a1-890d-524b12d3f735",
+      "unresolved": false
+    }
+  ]
+}
