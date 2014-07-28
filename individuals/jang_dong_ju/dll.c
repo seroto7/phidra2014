@@ -36,7 +36,6 @@ void add_list(int input)
 
 	new_node->value = input;
 
-	/* need to change */
 	new_node->next = head->next;
 	new_node->prev = head->prev;
 	head->next = new_node;
@@ -59,7 +58,6 @@ void print_all_list(void)
 
 void remove_list(int input)
 {
-	/* need to change */
 	struct node *p;
 
 	printf("##DEBUG## Remove %d \n", input);
@@ -84,7 +82,7 @@ void add_list_with_sort(int input)
 
 	printf("##DEBUG## Add with sort %d\n", input);
 
-	/* need to change */
+
 	for (p = head ; p != NULL ; p = p->next) {
 
 		if ((p->prev->value < input) && (input < p->value)) {
